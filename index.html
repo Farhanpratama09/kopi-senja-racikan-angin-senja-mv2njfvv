@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopi Senja — Racikan Angin Senja</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        espresso: '#241610',
+        latte: '#F4EADB',
+        sand: '#ECDCC5',
+        amber: '#E2A24B',
+        sunset: '#E4703C',
+        terra: '#B24A26',
+        cream: '#FBF5EC',
+        ink: '#1A0F0A'
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { color-scheme: light; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', system-ui, sans-serif; }
+
+  @keyframes kenburns { 0% { transform: scale(1.02) translate(0,0); } 100% { transform: scale(1.14) translate(-2.5%,-1.5%); } }
+  .kb { animation: kenburns 16s ease-in-out infinite alternate; }
+
+  .line-wrap { overflow: hidden; display: block; }
+  .line { display: block; transform: translateY(108%); transition: transform 1.05s cubic-bezier(.16,1,.3,1); }
+  .line-wrap.in .line { transform: translateY(0); }
+
+  [data-reveal="fade"] { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s cubic-bezier(.16,1,.3,1); }
+  [data-reveal="fade"].in { opacity: 1; transform: none; }
+
+  [data-reveal="mask"] { clip-path: inset(0 100% -25% 0); transition: clip-path 1.25s cubic-bezier(.16,1,.3,1); }
+  [data-reveal="mask"].in { clip-path: inset(0 -8% -25% 0); }
+
+  .grain {
+    position: absolute; inset: 0; pointer-events: none; z-index: 2;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3
